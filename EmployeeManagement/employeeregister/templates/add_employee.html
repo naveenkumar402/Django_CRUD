@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Add Employee</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+    <h1>Add Employee</h1>
+    <p style="color: red;">{{ error_message }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="mobile">Mobile:</label><br>
+        <input type="text" id="mobile" name="mobile"><br><br>
+        <button type="submit">Add Employee</button>
+    </form>
+        </div>
+    </div>
+</body>
+</html>
